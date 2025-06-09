@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BehaviouralPatterns/BehaviouralPatterns.iml" filepath="$PROJECT_DIR$/BehaviouralPatterns/BehaviouralPatterns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CreationalDesignPatterns/CreationalDesignPatterns.iml" filepath="$PROJECT_DIR$/CreationalDesignPatterns/CreationalDesignPatterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOPS/OOPS.iml" filepath="$PROJECT_DIR$/OOPS/OOPS.iml" />
       <module fileurl="file://$PROJECT_DIR$/SOLIDPrinciples/SOLIDPrinciples.iml" filepath="$PROJECT_DIR$/SOLIDPrinciples/SOLIDPrinciples.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/low-level-design.iml" filepath="$PROJECT_DIR$/.idea/low-level-design.iml" />
