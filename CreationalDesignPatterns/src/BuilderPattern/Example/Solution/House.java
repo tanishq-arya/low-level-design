@@ -34,9 +34,9 @@ public class House {
 
     public static class HouseBuilder extends House {
         // 3 parameters are mandatory
-        private String foundation;
-        private String structure;
-        private String roof;
+        private final String foundation;
+        private final String structure;
+        private final String roof;
 
         // Optional parameters
         private boolean hasGarage;
