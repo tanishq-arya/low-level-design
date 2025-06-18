@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/CreationalDesignPatterns/CreationalDesignPatterns.iml" filepath="$PROJECT_DIR$/CreationalDesignPatterns/CreationalDesignPatterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOPS/OOPS.iml" filepath="$PROJECT_DIR$/OOPS/OOPS.iml" />
       <module fileurl="file://$PROJECT_DIR$/Project.RideSharingApp/Project.RideSharingApp.iml" filepath="$PROJECT_DIR$/Project.RideSharingApp/Project.RideSharingApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Questions/Questions.iml" filepath="$PROJECT_DIR$/Questions/Questions.iml" />
       <module fileurl="file://$PROJECT_DIR$/SOLIDPrinciples/SOLIDPrinciples.iml" filepath="$PROJECT_DIR$/SOLIDPrinciples/SOLIDPrinciples.iml" />
       <module fileurl="file://$PROJECT_DIR$/StructuralPatterns/StructuralPatterns.iml" filepath="$PROJECT_DIR$/StructuralPatterns/StructuralPatterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/low-level-design.iml" filepath="$PROJECT_DIR$/.idea/low-level-design.iml" />
