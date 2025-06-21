@@ -1,4 +1,4 @@
-package VendingMachine.State;
+package VendingMachine.StatePattern;
 
 public class DispenseState implements State {
     private final VendingMachine vendingMachine;

@@ -1,4 +1,4 @@
-package VendingMachine.State;
+package VendingMachine.StatePattern;
 
 public enum Coin {
     ONE(1),

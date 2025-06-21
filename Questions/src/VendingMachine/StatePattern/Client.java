@@ -1,4 +1,4 @@
-package VendingMachine.State;
+package VendingMachine.StatePattern;
 
 public class Client {
     public static void main(String[] args) {

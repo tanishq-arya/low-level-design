@@ -1,4 +1,4 @@
-package VendingMachine.State;
+package VendingMachine.StatePattern;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

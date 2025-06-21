@@ -1,4 +1,4 @@
-package VendingMachine.Session;
+package VendingMachine.SessionPattern;
 
 public class Client {
     public static void main(String[] args) {

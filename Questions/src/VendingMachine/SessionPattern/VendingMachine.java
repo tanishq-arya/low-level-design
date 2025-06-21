@@ -1,4 +1,4 @@
-package VendingMachine.Session;
+package VendingMachine.SessionPattern;
 
 import java.util.ArrayList;
 import java.util.Arrays;

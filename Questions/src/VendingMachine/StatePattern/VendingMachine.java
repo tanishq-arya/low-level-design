@@ -1,4 +1,4 @@
-package VendingMachine.State;
+package VendingMachine.StatePattern;
 
 public class VendingMachine {
     private static VendingMachine instance; // single instance throughout

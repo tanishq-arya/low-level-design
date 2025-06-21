@@ -1,4 +1,4 @@
-package VendingMachine.Session;
+package VendingMachine.SessionPattern;
 
 public enum Coin {
     ONE(1),
