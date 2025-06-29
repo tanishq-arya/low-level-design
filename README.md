@@ -1,5 +1,22 @@
 ## Low Level Design
 
+### How to approach an LLD Problem ?
+
+### How to draw a UML diagram for any System ?
+In practice, most designs are iterative: you sketch a quick top‑level controller, then dive bottom‑up into your domain, 
+then adjust the controller, and so on. Over a few cycles you converge to a stable UML like the one you’ve drawn, with clear layers:
+
+```graphql
+Controller/Facade
+↓
+Strategy Interface
+↓
+Domain Objects ↔ State Patterns
+↓
+Simple Value Objects & Enums
+```
+That layered, top‑to‑bottom (or bottom‑to‑top) flow is the hallmark of maintainable, extensible UML designs.
+
 ### Questions
 - [ThreadSafety](Questions/src/ThreadSafety/)
 - [StackOverflow](Questions/src/StackOverflow/)
@@ -14,3 +31,4 @@
 - [TicTacToe](Questions/src/TicTacToe/)
 - [PubSubSystem](Questions/src/PubSubSystem/)
 - [ElevatorSystem](Questions/src/ElevatorSystem/)
+- [CarRentalSystem](Questions/src/CarRentalSystem/)
