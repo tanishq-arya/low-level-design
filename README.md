@@ -35,3 +35,4 @@ That layered, top‑to‑bottom (or bottom‑to‑top) flow is the hallmark of m
 - [HotelManagementSystem](Questions/src/HotelManagementSystem/)
 - [DigitalWalletService](Questions/src/DigitalWalletService/)
 - [LibraryManagementSystem](Questions/src/LibraryManagementSystem/)
+- [RestaurantManagementSystem](Questions/src/RestaurantManagementSystem/)
