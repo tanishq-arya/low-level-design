@@ -1,5 +1,11 @@
 ## Low Level Design
 
+### CourseNotes
+[Notes](design-patterns-course-notes.pdf)
+
+### DesignPatterns_SummaryTable
+[DesignPatterns_SummaryTable](design-patterns-summary-table.pdf)
+
 ### How to approach an LLD Problem ?
 
 ### How to draw a UML diagram for any System ?
