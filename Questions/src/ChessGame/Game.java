@@ -8,7 +8,7 @@ import java.util.*;
 public class Game {
     private final Board board = new Board();
     private Color currentTurn = Color.WHITE;
-    private final Deque<Move> history = new ArrayDeque<>();
+    private final MoveHistory history = new MoveHistory();
 
     public void start() {
         setupInitialPosition();
@@ -20,7 +20,7 @@ public class Game {
             String line = scanner.nextLine().trim();
 
             if (line.equalsIgnoreCase("undo")) {
-                if (!history.isEmpty()) {
+                if (history.canUndo()) {
                     undoLastMove();
                     currentTurn = currentTurn.opposite();
                 } else {
@@ -93,15 +93,17 @@ public class Game {
         if (!piece.isValidMove(from, to, board)) {
             return false;
         }
+
         // Execute move
         Piece captured = board.movePiece(from, to);
-        history.push(new Move(from, to, piece, captured));
+        history.recordMove(new Move(from, to, piece, captured));
+
         return true;
     }
 
     /** Undo the last move, restoring board state. */
     private void undoLastMove() {
-        Move last = history.pop();
+        Move last = history.undo();
         // Move piece back
         board.movePiece(last.getTo(), last.getFrom());
         last.getMovedPiece().setPosition(last.getFrom());
@@ -113,6 +115,10 @@ public class Game {
                 + last.getMovedPiece().getSymbol()
                 + " from " + last.getFrom()
                 + " to " + last.getTo());
+    }
+
+    public List<String> getHistory() {
+        return history.getHistory();
     }
 
     // TODO: implement proper check/checkmate detection

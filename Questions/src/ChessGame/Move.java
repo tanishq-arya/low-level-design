@@ -19,4 +19,12 @@ public class Move {
     public Coordinate getTo()   { return to; }
     public Piece getMovedPiece()   { return movedPiece; }
     public Piece getCapturedPiece(){ return capturedPiece; }
+
+    @Override
+    public String toString() {
+        return "Move{" +
+                "from=" + from +
+                ", to=" + to +
+                '}';
+    }
 }
