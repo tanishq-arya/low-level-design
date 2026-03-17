@@ -1,24 +1,18 @@
 package RateLimiter;
 
-enum UserType {
-    NORMAL,
-    PREMIUM
-}
-
-class User {
+public class User {
     private final String userId;
-    private final UserType userType;
+    private UserType userType;
 
     public User(String userId, UserType userType) {
         this.userId = userId;
         this.userType = userType;
     }
 
-    public String getUserId() {
-        return userId;
-    }
+    // getters
+    public String getUserId() {return userId;}
+    public UserType getUserType() {return userType;}
 
-    public UserType getUserType() {
-        return userType;
-    }
+    // setters
+    public void setUserType(UserType userType) {this.userType = userType;}
 }

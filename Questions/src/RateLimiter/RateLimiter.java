@@ -1,5 +1,5 @@
 package RateLimiter;
 
 public interface RateLimiter {
-    boolean allowRequest();
+    boolean allowRequest(String userId);
 }
