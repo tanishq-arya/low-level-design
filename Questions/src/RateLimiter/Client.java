@@ -6,25 +6,18 @@ public class Client {
         User normalUser = new User("user1", UserType.NORMAL);
         User premiumUser = new User("user2", UserType.PREMIUM);
 
-//        // normal user calls
-//        for (int i=1; i<=5; i++) {
-//            boolean allowed = service.allowRequest(normalUser);
-//            System.out.println("Normal req " + i + ": " + allowed);
+        // normal user calls
+        for (int i=1; i<=20; i++) {
+            boolean allowed = service.allowRequest(normalUser);
+            System.out.println("Normal req " + i + ": " + allowed);
 //            Thread.sleep(500); // 0.5 second gap
-//        }
-//
-//        // premium user calls
-//        for (int i=1; i<=7; i++) {
-//            boolean allowed = service.allowRequest(premiumUser);
-//            System.out.println("Premium req " + i + ": " + allowed);
-//            Thread.sleep(500); // 0.5 second gap
-//        }
+        }
 
-        // testing other rate limiters
-        for (int i=1; i<=7; i++) {
-            boolean allowed = service.allowRequest(premiumUser, RateLimiterType.FIXED_WINDOW);
+        // premium user calls
+        for (int i=1; i<=20; i++) {
+            boolean allowed = service.allowRequest(premiumUser);
             System.out.println("Premium req " + i + ": " + allowed);
-            Thread.sleep(500); // 0.5 second gap
+//            Thread.sleep(500); // 0.5 second gap
         }
     }
 }

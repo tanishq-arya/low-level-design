@@ -4,11 +4,10 @@ package RateLimiter;
 public class RateLimiterFactory {
 
     public static RateLimiter create(UserType type) {
-        if (type == UserType.PREMIUM) {
-            // 20 requests / 10 seconds
-            return new TokenBucketRateLimiter(new RateLimiterConfig(20, 10)); // higher capacity
+        if (type == UserType.PREMIUM) { // 20 requests / 10 seconds
+            return new TokenBucketRateLimiter(15, 10); // higher capacity
         } else {
-            return new TokenBucketRateLimiter(new RateLimiterConfig(10, 5));
+            return new TokenBucketRateLimiter(10, 5);
         }
     }
 

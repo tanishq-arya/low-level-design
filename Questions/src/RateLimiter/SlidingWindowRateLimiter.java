@@ -21,19 +21,21 @@ public class SlidingWindowRateLimiter implements RateLimiter {
 
         // store all allowed requests for a user
         requestMap.putIfAbsent(userId, new LinkedList<>());
-        Deque<Long> timestamps = requestMap.get(userId);
+        Deque<Long> q = requestMap.get(userId); // timestamps
 
-        // Remove timestamps outside window => for each starting element check if [elapsedTime > window]
-        while (!timestamps.isEmpty() && now - timestamps.peekFirst() > windowSizeMillis) {
-            timestamps.pollFirst();
+        synchronized (q) {
+            // Remove timestamps outside window => for each starting element check if [elapsedTime > window]
+            while (!q.isEmpty() && now - q.peekFirst() >= windowSizeMillis) {
+                q.pollFirst();
+            }
+
+            // check if allowed requests are inside limit
+            if (q.size() < limit) {
+                q.addLast(now); // allowed => store in map
+                return true;
+            }
+
+            return false; // deny
         }
-
-        // check if allowed requests are inside limit
-        if (timestamps.size() < limit) {
-            timestamps.addLast(now); // allowed => store in map
-            return true;
-        }
-
-        return false; // deny
     }
 }

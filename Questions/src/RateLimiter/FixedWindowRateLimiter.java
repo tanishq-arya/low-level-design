@@ -7,8 +7,13 @@ public class FixedWindowRateLimiter implements RateLimiter {
     private final long windowSizeMillis;
 
     private static class Window {
-        int count;
         long startTime;
+        int count;
+
+        Window(long start) {
+            this.startTime = start;
+            this.count = 0;
+        }
     }
 
     // { user => window }
@@ -25,8 +30,9 @@ public class FixedWindowRateLimiter implements RateLimiter {
     public synchronized boolean allowRequest(String userId) {
         long now = System.currentTimeMillis();
 
-        userWindows.putIfAbsent(userId, new Window());
+        userWindows.putIfAbsent(userId, new Window(now));
         Window window = userWindows.get(userId);
+
         if(now - window.startTime > windowSizeMillis) { // outside window
             // reset window
             window.startTime = now;

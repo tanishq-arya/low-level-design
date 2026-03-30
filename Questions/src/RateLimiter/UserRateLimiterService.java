@@ -11,12 +11,4 @@ public class UserRateLimiterService {
 
         return userLimiters.get(user.getUserId()).allowRequest(user.getUserId());
     }
-
-    public boolean allowRequest(User user, RateLimiterType type) {
-        // Create a RateLimiter for that user if it doesn't exist already
-        userLimiters.putIfAbsent(user.getUserId(), RateLimiterFactory.create(type));
-
-        return userLimiters.get(user.getUserId()).allowRequest(user.getUserId());
-    }
-
 }
