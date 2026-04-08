@@ -49,3 +49,4 @@ That layered, top‑to‑bottom (or bottom‑to‑top) flow is the hallmark of m
 - [RateLimiter](Questions/src/RateLimiter/)
 - [Uber](Questions/src/Uber/)
 - [Ecommerce](Questions/src/Ecommerce/)
+- [Jira](Questions/src/Jira/)
